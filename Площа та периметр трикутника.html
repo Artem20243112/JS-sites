@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+      body {
+      background: url(https://img.freepik.com/free-photo/vivid-blurred-colorful-background_58702-2655.jpg?size=626&ext=jpg&ga=GA1.1.44546679.1716681600&semt=ais_user);
+    font-size: 15px;
+    text-align: center;
+}
+
+
+
+p {
+    font-size: 15px;
+    margin: 5;
+
+}
+
+input {
+    background-color: rgb(0, 225, 255);
+    color: #1100ff;
+    height: 15px;
+    margin: auto ;
+}
+
+.form_stile {
+    width: 450px;
+    height:300px;
+    color: rgba(17, 0, 255, 0.651);
+    background-color: semi-transparent;
+    margin: auto auto;
+    margin-top: 10%;
+    padding: 10px 5px;
+   
+}
+/* CSS */
+.button-63 {
+align-items: center;
+background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+border: 0;
+border-radius: 8px;
+box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+box-sizing: border-box;
+color: #FFFFFF;
+display: left;
+font-family: Phantomsans, sans-serif;
+font-size: 5px;
+justify-content: center;
+line-height: 1em;
+max-width: 100%;
+min-width: 10px;
+padding: 10px 10px;
+text-decoration: none;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+white-space: nowrap;
+cursor: pointer;
+}
+
+.button-63:active,
+.button-63:hover {
+outline: 0;
+}
+
+@media (min-width: 10px) {
+.button-63 {
+  font-size: 8px;
+  min-width: 5px;
+}
+}
+  </style>
+</head>
+<body>
+    <script>
+        function triangle(){
+        let a=+document.triangle_f.a.value;
+        let b=+document.triangle_f.b.value; 
+        let c=+document.triangle_f.c.value;
+        let p=(a+b+c)/2;
+        let P=a+b+c;
+        let S=Math.sqrt(p*(p-a)*(p-b)*(p-c));
+        let area=document.getElementById("area");
+        let perimeter=document.getElementById("perimeter"); 
+        if((a+b)>c && (b+c)>a && (a+c)>b && a>0 &&b>0 &&c>0){
+        string=S;
+        string1=P;
+        }else{
+        string=string1="Такого трикутника не існує"
+        }
+        area. innerHTML = string;
+        perimeter.innerHTML= string1;
+    }
+        </script>
+        <div class="form_stile">
+        <p>Площа та периметр трикутника зі сторонами а, b, c</p> 
+        <form name="triangle_f" action="javascript:triangle()">
+        a<input class="side" name="a" type="text" value="" size="4">
+        b<input class="side" name="b" type="text" value="" size="4"> 
+        c<input class="side" name="c" type="text" value="" size="4">
+        
+<button class="button-63" type="submit" role="button"><span class="text">Poзрахувати</span></button>
+
+<button class="button-63" type="reset" role="button"><span class="text">Скинути</span></button>
+
+        
+        </form>
+        Площа трикутника дорівнює: <span id="area"></span><br/> Периметр трикутника дорівнює: <span id="perimeter"></span>
+        </div>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+        body {
+        background: url(https://img.freepik.com/free-photo/vivid-blurred-colorful-background_58702-2655.jpg?size=626&ext=jpg&ga=GA1.1.44546679.1716681600&semt=ais_user);
+      font-size: 15px;
+      text-align: center;
+  }
+  
+  
+
+  p {
+      font-size: 15px;
+      margin: 5;
+
+  }
+
+  input {
+      background-color: rgb(0, 225, 255);
+      color: #1100ff;
+      height: 15px;
+      margin: auto ;
+  }
+
+  .form_stile {
+      width: 450px;
+      height:300px;
+      color: rgba(17, 0, 255, 0.651);
+      background-color: semi-transparent;
+      margin: auto auto;
+      margin-top: 10%;
+      padding: 10px 5px;
+     
+  }
+  /* CSS */
+.button-63 {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: left;
+  font-family: Phantomsans, sans-serif;
+  font-size: 5px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 10px;
+  padding: 10px 10px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button-63:active,
+.button-63:hover {
+  outline: 0;
+}
+
+@media (min-width: 10px) {
+  .button-63 {
+    font-size: 8px;
+    min-width: 5px;
+  }
+}
+    </style>
+</head>
+<body>
+    <script>
+        /*let count = +prompt('Скільки буде 2*2?', 0); 
+switch (count) {  
+  case 4:
+    alert( 'Правильно!' );
+    break;
+  case 3:
+  case 5:
+    alert( 'майже вгадав' );
+    break;
+  default:
+    alert( 'Я не вмію рахувати' );
+}
+let countX = +prompt('Введіть число від 5 до 10?', '');
+switch (countX) {  
+  case 5:
+    alert( 5 );
+    break;
+  case 6:
+  alert( 6 );
+    break;
+  case 10:
+    alert( 10 );
+    break;
+    case 10:
+    alert( 10 );
+    break;
+  default:
+    alert( 'Я не вмію рахувати' );
+}
+let gardes = prompt('Ведіть вашу середню оцінку',''); 
+switch (gardes) {
+  case 1:
+  case 2:
+  case 3:
+      alert("Це початковий рівень")
+    break;
+  case 4:
+  case 5: 
+  case 6:
+      alert("Це поганий рівень.")
+    break;
+  case 7: 
+  case 8:
+  case 9:
+      alert("Це середній рівень.")
+    break;  
+  case 10: 
+  case 11:
+  case 12:
+  alert("Ти відмінник.")
+    break;
+    default:
+        alert("Такої оцінки не існує.")
+}*/
+function grades(){
+        let grade = +document.grade_level.a.value;
+        let answer=document.getElementById("level")
+switch(grade){
+  case 1:
+  case 2:
+  case 3:
+        string='Початковий😢.';
+        break;
+  case 4:
+  case 5: 
+  case 6:
+        string='Середній🙁.';
+        break;
+  case 7: 
+  case 8:
+  case 9:
+        string='Достатній🙂.';
+        break;
+  case 10: 
+  case 11:
+  case 12:
+        string='Ти відмінник😃👍.';
+        break;
+default:
+    string='Такої оцінки не існує.'
+}
+answer.innerHTML = string;
+}
+    </script>
+    <div class="form_stile">
+        <h1>Твій рівень</h1>
+        <form name="grade_level" action="javascript:grades()">
+          Ведіть вашу середню оцінку<input class="grade" name="a" type="text" value="" size="4"><br>
+          <button class="button-63" type="submit" role="button">Розрахувати</button>
+          <button class="button-63" type="reset" role="button">Скинути</button>
+            </form>
+        Твій рівень: 
+        <span id="level"></span>
+    </div>
+</body>
+</html>
